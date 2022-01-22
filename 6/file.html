@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Таблица</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" onclick="toggle(this)">
+                </td>
+                <td colspan="3">Отметить/снять всё</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="foo">
+                </td>
+                <td>Иванов</td>
+                <td>Иван</td>
+                <td>Иванович</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="foo">
+                </td>
+                <td>Петров</td>
+                <td>Глеб</td>
+                <td>Самуилович</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="foo">
+                </td>
+                <td>Сидоров</td>
+                <td>Феофан</td>
+                <td>Евлампиевич</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="foo">
+                </td>
+                <td>Некто</td>
+                <td>Без</td>
+                <td>Имени</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function toggle(s) {
+           let checks = document.getElementsByName("foo");
+            for (var i = 0, n = checks.length; i < n; i++) { //Присваиваем другим чекбоксам значение передаваемого в функцию
+                checks[i].checked = s.checked;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
